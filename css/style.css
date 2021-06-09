@@ -1,7 +1,7 @@
 :root {
    --main-color: #fff;
    --main-text-color: #212121;
-   --second-text-color: rgba(117, 117, 117,1);
+   --second-text-color: #757575;
    --special-color: #2196f3;
    --main-font: "Roboto", sans-serif;
    --bg-hero-footer: #2f303a;
@@ -244,27 +244,97 @@ a.active {
    padding: 5px;
   
 }
-.modal-button:hover .close-icon{
+.modal-button:hover {
    cursor: pointer;
-   fill: var(--special-color);
+   color: var(--special-color);
 }
 .close-icon{
-fill:#000;
-}
-.modal-form p{
-margin-top: 10px;
+fill:currentColor
 
 }
-.modal-form input:not(:last-child){
-   margin-top: 4px;
-   height: 35px;
-   border: 1px solid grey;
+.modal h3{
+ font-weight: 700;
+ font-size: 20px;
+ line-height: 1.150;
+ text-align: center;
+ letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+.modal-form{
+  width:448px ;
+   margin-top: 12px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.form-field{
+   position: relative;
+   content: "";
+   margin-bottom: 12px;
+   display: flex;
+   flex-direction: column;
+}
+.form-field.check-box {
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  
+}
+.form-field input[type="checkbox"] {
+   width: 16px;
+   height: 15px;
+ 
+}
+.form-field label{
+   margin-bottom: 4px;
+   font-size: 12px;
+   line-height: 1.166;
+   letter-spacing: 0.01em;
+   color:var(--second-text-color);
+
+}
+.form-field .check-box-text{
+   font-size: 14px;
+   line-height:1.714;
+   letter-spacing: 0.03em;
+   color:var(--second-text-color);
+   margin-left: 8px;
+}
+.form-field .check-box-text a{
+   color: var(--special-color);
+}
+.form-field input{
+   height: 40px;
+   border: 1px solid #21212133;
    border-radius: 4px;
 }
-.modal-form textarea{
-   margin-top: 4px;
-   border: 1px solid grey;
+.form-icon{
+   position: absolute;
+   content: "";
+   top:54%;
+   left:20px;
+   transform: translate(-54%);
+}
+.form-field textarea{
+   border: 1px solid #21212133;
    border-radius: 4px;
+   resize: none;
+   padding: 12px 16px;
+}
+.form-field textarea::placeholder{
+
+font-size: 12px;
+line-height: 1.166;
+letter-spacing: 0.01em;
+color: #75757580;
+
+}
+ .submit{
+   margin-top: 30px;
+   padding:10px 55px;
+   letter-spacing: 0.06em;
 }
 /* Секция "особености работы" */
 .features-part {
@@ -399,7 +469,7 @@ margin-top: 16px;
   color:rgba(175, 177, 184, 1);
    width: 44px;
    height: 44px; 
-   transition-property: background-color;
+   transition-property: background-color,color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -413,9 +483,6 @@ margin-top: 16px;
    height: 20px;
    width: 20px;
    fill:currentColor;
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* секция клиенты */
@@ -445,7 +512,7 @@ margin-top: 16px;
    border-radius: 4px;
    color:rgba(175, 177, 184, 1);
    border: 1px solid rgba(175, 177, 184, 1);
-   transition-property:border;
+   transition-property:border,color;
    transition-duration: 250ms;
    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -454,9 +521,7 @@ margin-top: 16px;
    width: 106px;
    height: 60px; 
    fill: currentColor; 
-   transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 .customers a:hover,
 .customers a:focus{
@@ -468,6 +533,9 @@ margin-top: 16px;
 .footer-part {
    background-color:var(--bg-hero-footer);
    padding: 60px 0;
+}
+.footer-part .container{
+   align-items:baseline;
 }
 .container-logo-address{
    width: 231px;
@@ -508,13 +576,12 @@ margin-bottom: 9px;
    color: var(--special-color);
 }
 .container-sociallink {
-   padding:12px 0 40px 0;
    margin-left: 70px;
   
 }
-.container-sociallink h2{
-   font-weight: bold;
-   font-size: 14px;
+.container-sociallink p{
+   font-weight: 700;
+   font-size: inherit;
    line-height: inherit;
    letter-spacing: inherit;
    text-transform: uppercase;
@@ -552,6 +619,63 @@ margin-bottom: 9px;
    fill:var(--main-color);
  
 }
+.footer-form{
+   margin-left: 93px;
+}
+.footer-form-item{
+   display: flex;
+   align-items: baseline;
+}
+.footer-form p{
+   font-weight: 700;
+   font-size: inherit;
+   line-height: inherit;
+   letter-spacing: inherit;
+   text-transform: uppercase;
+   color: var(--main-color);
+}
+.footer-form input{
+  width: 358px;
+  height: 50px;
+  border: 1px solid #ffffff4d;
+ border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: inherit;
+  margin-top: 20px;
+  padding: 0 16px;
+}
+.footer-form input::placeholder{
+   font-size: 16px;
+   line-height: 1.250;
+   display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: #ffffff99;
+}
+.footer-form-submit{
+   padding:10px 38px;
+   background-color: var(--special-color);
+   display:flex;
+   align-items: center;
+   text-align: center;
+   font-family: inherit;
+   color:var(--main-color);
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.875;
+   letter-spacing: 0.06em;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+   border: 0;
+   margin-left: 12px;
+}
+.footer-form-icon{
+margin-left: 10px;
+}
+.footer-form-submit:hover{
+ cursor: pointer;
+}
+
 
 /* оформление страницы portfolio */
 /* оформление header и footer обоих страниц одинаково  */
