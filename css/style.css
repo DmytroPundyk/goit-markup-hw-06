@@ -198,8 +198,8 @@ a.active {
    visibility: hidden;
    pointer-events: none;
    opacity: 0;
-   transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-   opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition:opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .backdrop {
   position:fixed;
@@ -663,6 +663,7 @@ margin-bottom: 9px;
  border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background-color: inherit;
+  color: #ffffff99 ;
   margin-top: 20px;
   padding: 0 16px;
 }
