@@ -239,14 +239,15 @@ a.active {
    padding: 5px;
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button:hover {
+.modal-button:hover,
+.modal-button:focus {
    cursor: pointer;
    color: var(--special-color);
 }
 .close-icon {
    fill: currentColor;
 }
-.modal h3 {
+.modal p {
    font-weight: 700;
    font-size: 20px;
    line-height: 1.15;
@@ -268,12 +269,14 @@ a.active {
    display: flex;
    flex-direction: column;
 }
+.form-field:nth-child(4) {
+   margin-bottom: 20px;
+}
 
 .form-field.check-item {
    display: flex;
    flex-direction: row;
-   margin-top: 20px;
-   margin-bottom: 0;
+   margin-bottom: 30px;
    align-items: center;
    justify-content: center;
 }
@@ -298,12 +301,18 @@ label.check-item {
 .form-field .check-box:checked + .check-icon {
    background-color: var(--special-color);
    border: none;
+   cursor: pointer;
 }
 .check-icon {
    display: inline-block;
    border: 2px solid var(--main-text-color);
    border-radius: 4px;
    margin-right: 7px;
+}
+.check-icon:hover,
+.check-icon:focus {
+   border-color: var(--special-color);
+   cursor: pointer;
 }
 .form-field a {
    color: var(--special-color);
@@ -317,6 +326,7 @@ label.check-item {
    border-radius: 4px;
    padding: 12px 42px;
    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon {
@@ -329,7 +339,7 @@ label.check-item {
    fill: currentColor;
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-field textarea {
+.form-field .comment {
    margin-top: 4px;
    font-size: 14px;
    border: 1px solid #21212133;
@@ -337,6 +347,7 @@ label.check-item {
    resize: none;
    padding: 12px 16px;
    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-field textarea::placeholder {
    font-size: 12px;
@@ -358,7 +369,6 @@ label.check-item {
    cursor: pointer;
 }
 .submit {
-   margin-top: 30px;
    padding: 10px 55px;
    letter-spacing: 0.06em;
 }
